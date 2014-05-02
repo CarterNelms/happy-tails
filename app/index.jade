@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='utf-8')
+		title Happy Tails
+		link(rel='stylesheet', href='./css/app.css')
+	body
+		#page-wrap
+			h1 Happy Tails
+
+			#controls
+				select#species
+					option Dragon
+					option Dog
+					option Cat
+					option Sloth
+				select#gender
+					option Male
+					option Female
+				select#weapon
+					option Claws
+					option Teeth
+					option Fire Breath
+					option Poison
+				input#name(type='text' placeholder='Name')
+				input#age(type='text' placeholder='Age')
+				input#photo(type='text' placeholder='Photo URL')
+				button#add Add
+			#animals
+				h4 Animals
+				#dragonBox
+					h4 Dragons
+					#dragons
+				#dogBox
+					h4 Dogs
+					#dogs
+				#catBox
+					h4 Cats
+					#cats
+				#slothBox
+					h4 Sloths
+					#sloths
+
+		script(src='./js/vendor/traceur.js')
+		script(src='./js/vendor/experimental.js')
+		script(src='./js/vendor/jquery-2.1.0.js')
+		script(src='./js/vendor/lodash-2.4.1.js')
+		script(src='./js/vendor/moment-2.6.0.js')
+		script(src='./js/es6/utility.js')
+		script(src='./js/es6/dragon.js')
+		script(src='./js/es6/dog.js')
+		script(src='./js/es6/cat.js')
+		script(src='./js/es6/sloth.js')
+		script(src='./js/es6/main.js')

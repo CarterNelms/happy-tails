@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive);
+@basicMargin: 2px solid black;
+@imageDivHeightPercentage: 70%;
+
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body{
+  background-image: url('../media/dog-and-cat-wallpaper.png');
+  background-size: cover;
+  background-repeat: none;
+  background-attachment: fixed;
+}
+
+#page-wrap{
+  width: 1024px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#page-wrap > *{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  color: #dcff98;
+  font-size: 80px;
+  font-family: 'Cedarville Cursive';
+  font-weight: bold;
+  letter-spacing: 15px;
+  margin: 0;
+}
+
+h4{
+  margin: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  color: #dcff98;
+}
+
+#animals{
+  text-align: left;
+
+  > div{
+    margin-left: 25px;
+
+    > div{
+      height: 225px;
+      margin: 0 25px;
+      border: 1px solid darkgreen;
+      background-color: rgba(255, 255, 255, 0.65);
+      border-radius: 5px;
+      overflow: auto;
+
+      > div{
+        display: inline-block;
+        margin: 0 5px;
+        margin-top: 0;
+        border: @basicMargin;
+        text-align: center;
+        height: 100%;
+        position: relative;
+
+        > .imageDiv{
+          height: @imageDivHeightPercentage;
+          background-color: grey;
+
+          > img.animalImg{
+            width: auto;
+            height: 100%;
+            border-left: @basicMargin;
+            border-right: @basicMargin;
+          }
+
+          > img.training{
+            width: auto;
+            height: 40px;
+            position: absolute;
+            right: 1%;
+            bottom: 100% - @imageDivHeightPercentage;
+            background-color: rgba(255, 255, 255, 0.65);
+            border: @basicMargin;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        }
+
+        > .windowText{
+          border-top: @basicMargin;
+          padding-top: 3px;
+          text-align: left;
+
+          > img{
+            right: 3px;
+            bottom: 3px;
+            position: absolute;
+            padding: 5px;
+            border-radius: 50%;
+            border: @basicMargin;
+          }
+        }
+      }
+    }
+  }
+}
